@@ -1,0 +1,77 @@
+ @import './colors.css';
+
+
+ li, a, button{
+    font-weight: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 30px 10%;
+    color: var(--text-color);
+}
+
+
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: var(--main-color);
+}
+
+button {
+  padding: 9px 25px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 50px;
+}
+
+.button {
+  cursor: pointer;
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    text-align:center;
+}
+
+
+
+@media only screen and (max-width:748px){
+  .nav__links li {
+    display: inline-block;
+    padding: 0px 10px;
+  }
+
+}
+@media only screen and (max-width:600px) {
+  header {
+    display: block;
+    text-align: center;
+}
+.nav__links {
+    display: none;
+  }
+}
+
+
+
+
+
+
+      
