@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="burgericon.css">
-    <link rel="stylesheet" href="wavybackground.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="gridcontainer.css">
     <script src="app.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
-    <header>
-        <a href="a"><img src="images/logo-img.png"
+
+    <header id="myHeader">
+
+        <div>
+           <img src="images/logo-img.png"
             alt="logo"
+            id="logo"
             class="logo_img"
             width="80"
-            height="80"></a>
+            height="80">
+        </div>
             
-       <nav> 
+       <nav id="navbar"> 
             <div class="wrapper">
                 <input type="checkbox" id="checkbox" class="wrapper__checkbox">
                 <label for="checkbox" class="wrapper__button">
@@ -31,33 +38,195 @@
                 <div class="wrapper__menu">
                     <ul class="burgermenu_links">
 
-                  <li><a href="a" class="wrapper__menu-link">About</a></li>
-                  <li><a href="a" class="wrapper__menu-link">Skills</a></li>
-                  <li><a href="a" class="wrapper__menu-link">Projects</a></li>
+                  <li><a href="#about" class="wrapper__menu-link">About</a></li>
+                  <li><a href="#skills" class="wrapper__menu-link">Skills</a></li>
+                  <li><a href="#projects" class="wrapper__menu-link">Projects</a></li>
+                  <li><a href="#contact" class="wrapper__menu-link">Contact</a></li>
                   </ul>
                 </div>
             </div>
                 
             <ul class="nav__links">
-                <li><a href="a">About</a></li>
-                <li><a href="a">Skills</a></li>
-                <li><a href="a">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </div>
         </nav>
 
-        <a class="button" href="a"><button>Contact</button></a>
+        <div class="button_contact">
+            <a href="#contact"><button>Contact</button></a>
+        </div>
         </header>
     <div class="grid-container">
-        <div class="main-content"></div>
-        <div class="profile-photo"></div>
-        <div class="secondary-content"></div>
-        <div class="secondary-photos-main"></div>
-        <div class="last-content"></div>
-        <div class="last-content-main"></div>
+        <div class="main-content"  id="about">
+            <div class="content_main_container">
+                <section id="welcome_section">
+                <h1>HI!</h1>
+                
+                <p>I'm David, a young Colombian who loves web development; interested in learning new skills and improve, I like to work in a team, solve problems and i love what i do.</p>
+              <br>
+              <ul>
+                  <li><p>Languages: Spanish (native) | English (intermediate-current learning)</p></li>
+                  <li><p>Age: 18</p></li>
+                  <li><p>Occupation: Industrial Technology Student (Technological University of Pereira) | Web developer (self-taught)</p></li>
+
+              </ul>
+              </section>
+            </div>
+        </div>
+        <div class="profile-photo">
+            <div class="content_profile_photo">
+            <img src="images/profile__photo.png"
+            alt="profile"
+            title="profile_photo">
+            </div>
+        </div>
+
+        <div class="secondary-content" id="skills">
+        <div  class="content_main_container">
+            <h1>WHAT CAN I DO?</h1>
+<p>I am a person very curious who is always looking new habilities for learn and many ways to solve problems, so far i feel comfortable using technologies like html, css, git, github, currently i have been learning and practice JavaScript  and different tools for make interesting web-sites designs, i expect be able to use libraries like react.js and frameworks like Express.js (i'd like to become a full stack dev) in the near futuro, also python calls my attention when programming languages is about. The technologies that i've learned have been self taught using resorces as freecodecamp and diverse docuentation for understand how those technologies works</p>        </div>
+        </div>
+    
+        <div class="secondary-photos-main">
+            <div class="css-skill">
+                <div class="skills_position">
+                <img src="images/css-logo.png"
+                     alt="css-skill"
+                     title="css-logo"
+                     class="skills_logo">
+                     </div>
+            </div>
+            <div class="html-skill">
+                <div class="skills_position">
+                <img src="images/html-logo.png"
+                     alt="html-skill"
+                     title="html-logo"
+                     class="skills_logo">
+                     </div>
+            </div>
+            <div class="js-skill">
+                <div class="skills_position">
+                <img src="images/js-logo.png"
+                     alt="javascript-skill"
+                     title="js-logo"
+                     class="skills_logo">
+                     </div>
+            </div>
+            <div class="sql-skill">
+                <div class="skills_position">
+                <img src="images/sql-logo.png"
+                     alt="sql-skill"
+                     title="sql-logo"
+                     class="skills_logo">
+                     </div>
+            </div>
+            <div class="title-skills-photos">
+                <div class="text_transition">
+                <ul>
+                    <li>SKILLS!</li>
+                    <li>WEB DESIGN</li>
+                    <li>SKILLS!</li>
+                </ul>
+            </div>
+            </div>
+          </div>
+          
+        <div class="last-content">
+            <h1 id="animated">WHAT I DO</h1>
+        </div>
+        <div class="last-content-main" id="projects"></div>
+    </div>   
+    <footer>
+  <div class="contact_information" id="contact">
+  <h1>Contact information</h1>
+    <ul>
+    
+    <li><a href="mailto:juanlc1526@gmail.com"  target="_blank"><p class="contact_link">
+        <img 
+            src="images/email_logo.png"
+            alt="email"
+            title="email_contact"
+            width="30"
+            align="center"> Send Email</p></a></li>
+            
+    
+    <li><a href="https://www.google.com/maps/place/Urbanizaci%C3%B3n+Santa+Clara/@4.7870959,-75.7316857,16z/data=!4m8!1m2!2m1!1ssanta+clara+pereira!3m4!1s0x8e387d9e813a2aed:0x663f876de8fa433e!8m2!3d4.7862911!4d-75.7316191" target="_blank"><p class="contact_link">
+        <img 
+            src="images/house_logo.png"
+            alt="home"
+            title="home_contact"
+            width="25"> Colombia, Pereira</p></a></li>
+
+    <li><a href="https://api.whatsapp.com/send?phone=573205279852&text=Hello!%20What%20can%20i%20help%20you%20with?" target="_blank"><p class="contact_link">
+        <img 
+            src="images/whatsapp_logo.png"
+            alt="whatsapp"
+            title="whatsapp_contact"
+            width="35"
+            align="center"> +57 320579852</p></a></li>
+            </ul>
     </div>
-    <div id="wave">
-    <footer><p>&copy; 2021 Portfolio Juan David Ladino</p></footer>
+
+<div class="social_media">
+  <h1>Social Media</h1>
+  <ul>
+    <li><a href="https://github.com/Ladino-Juan" target="_blank"><p class="social_link">
+        <img 
+            src="images/github_logo.png"
+            alt="github"
+            title="github_socialmedia"
+            width="30"
+            align="center"> Follow me on github</p></a></li>
+
+    <li><a href="https://www.instagram.com/davidladino15/" target="_blank"><p class="social_link">
+        <img 
+            src="images/instagram_logo.png"
+            alt="instagram"
+            title="instagram_socialmedia"
+            width="30"
+            align="center"> Follow me on Instagram</p></a></li>
+
+    <li><a href="https://www.linkedin.com/in/juan-david-ladino-carvajal-67aa5819b/" target="_blank"><p class="social_link">
+        <img 
+            src="images/linkedin_logo.png"
+            alt="linkedin"
+            title="linkedin_socialmedia"
+            width="30"
+            align="center"> Follow me on Linkedln</p></a></li>
+
+    <li><a href="https://twitter.com/LadinoDavid1" target="_blank"><p class="social_link">
+        <img 
+            src="images/twitter_logo.png"
+            alt="twitter"
+            title="twitter_socialmedia"
+            width="30"
+            align="center"> Follow me on Twitter</p></a></li>
+  </ul>
 </div>
-</body>
+<div class="aditional_information">
+  <h1>Aditional Information</h1>
+  <p class="resource_paragraph">This web was made by Juan David Ladino Carvajal who is learning programming at the moment so it may contain some bugs or failures, I have to apologize if something doesn't run. My intention with this web is get a job or join into a group for keep learning programming, practice and improve my skills. thank you for visiting me.</p>
+  <br>
+  <h3>Aditional Resources</h3>
+  <p>
+    <ul>
+      <li><a href="https://codepen.io/" target="_blank" class="resource_link">codepen.io</a></li>
+      <li><a href="https://www.theodinproject.com/" target="_blank" class="resource_link">theodinproject.com</a></li>
+      <li><a href="https://github.com/" target="_blank" class="resource_link">github.com</a></li>
+      <li><a href="https://stackoverflow.com/" target="_blank" class="resource_link">stackoverflow.com</li>
+      <li><a href="https://www.freecodecamp.org/" target="_blank" class="resource_link">freecodecamp.org</a></li>
+      <li><a href="https://grid.layoutit.com/" target="_blank"class="resource_link">grid.layoutit.com</a></li>
+    </ul>
+  </p>
+</div>
+</footer>
+
+<div class="copyright">
+    <p>&copy 2021 | Juan David Ladino Carvajal</p>
+</div>
+   
+
+    </body>
 </html>

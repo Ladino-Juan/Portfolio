@@ -1,0 +1,75 @@
+html, body, .grid-container { height: 100%; margin: 0;}
+
+.grid-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 35vh 0px;
+    grid-template-areas:
+      "profile-photo main-content main-content main-content"
+      "secondary-content secondary-content secondary-content secondary-photos-main"
+      "last-content last-content-main last-content-main last-content-main";
+  }
+  .profile-photo { grid-area: profile-photo; }
+  .main-content { grid-area: main-content; }
+  .secondary-content { grid-area: secondary-content; }
+  .secondary-photos-main {
+    display: grid;
+    gap: 2px 2px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "html-skill css-skill js-skill"
+      "sql-skill title-skills-photos title-skills-photos";
+    grid-area: secondary-photos-main;
+  }
+  .html-skill {grid-area: html-skill;}
+  .js-skill {grid-area: js-skill;}
+  .css-skill {grid-area: css-skill;}
+  .title-skills-photos {grid-area: title-skills-photos;}
+  .sql-skill {grid-area: sql-skill;}
+  .last-content-main { grid-area: last-content-main; }
+  .last-content { grid-area: last-content; }
+  
+@media only screen and (max-width: 1100px){
+  .grid-container {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.2fr 1fr 1fr 1fr 1.2fr 1.2fr;
+      gap: 8vh 0px;
+      grid-template-areas:
+        "main-content"
+        "profile-photo"
+        "secondary-content"
+        "secondary-photos-main"
+        "last-content"
+        "last-content-main"
+    }
+    
+    .main-content { grid-area: main-content; }
+    
+    .profile-photo { grid-area: profile-photo; }
+    
+    .secondary-content { grid-area: secondary-content; }
+    
+    .secondary-photos-main { grid-area: secondary-photos-main; }
+    
+    .last-content { grid-area: last-content; }
+    
+    .last-content-main { grid-area: last-content-main; }
+  } 
+
+
+   
+
+
+
+

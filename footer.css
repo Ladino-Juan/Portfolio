@@ -1,0 +1,86 @@
+@import './colors.css';
+@import './style.css';
+
+footer{
+    display: flex;
+    background: var(--main-color);
+    color: white;
+    padding:10vh;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+  .aditional_information {
+    width: 30%;
+    
+  }
+  .social_media{
+    width: 30%;
+    line-height: 7vh;
+  }
+  .contact_information{
+    width: 30%;
+    line-height: 7vh;
+  }
+.social_link {
+    font-weight: 10px;
+    font-size: 13px;
+    font-family: var(--paragraph-font);
+    text-decoration: none; 
+    color: white;
+}
+
+.contact_link {
+    font-weight: 10px;
+    font-size: 13px;
+    font-family: var(--paragraph-font);
+    text-decoration: none; 
+    color: white;
+}
+
+.resource_link {
+    font-weight: 10px;
+    font-size: 13px;
+    font-family: var(--paragraph-font);
+    text-decoration: none; 
+    color: white;
+}
+
+
+  footer h1{color: var(--text-color); text-transform: uppercase; font-family: var(--title-font);}
+  footer h3{color: var(--text-color); text-transform: uppercase; font-family: var(--title-font);}
+  
+  footer li{
+    list-style:none;
+  }
+  footer div p{
+    font-weight: 10px;
+    font-size: 15px;
+    text-align: justify; 
+    font-family: var(--paragraph-font);}
+
+    .copyright{
+      background-color: var(--main-color);
+      color: white;
+      font-family: var(--title-font);
+
+    }
+
+    @media only screen and (max-width: 900px){
+
+      footer{justify-content: space-between;}
+        .social_link {font-size: 12px;}
+        .contact_link {font-size: 12px;}
+        .resource_link {font-size: 12px;}
+        .resource_paragraph {font-size: 15px;}
+        footer h1{font-size: 17px;}
+        footer h3{font-size: 15px;}
+  }
+    
+    @media only screen and (max-width: 600px){
+      footer{flex-direction: column;}
+      .aditional_information{width: 100%;}
+      .social_media{width: 100%;}
+      .contact_information{width: 100%;}
+    }

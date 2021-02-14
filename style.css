@@ -1,97 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import "./colors.css";
+
+
+:root{
+  --title-font: 'Oswald', sans-serif;
+  --paragraph-font:'Raleway', sans-serif;
+}
+
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Tinos', serif;
 }
 
-html, body, .grid-container { height: 100%; margin: 0; }
-
-.grid-container {
-    height: 200vh;
-  display: grid;
-  grid-template-columns: 1fr 0.8fr 3fr 0.1fr 1fr 1fr;
-  grid-template-rows: 3fr 1.2fr 2.5fr 1.5fr 4.5fr 1.4fr;
-  gap: 20px 5px;
-  grid-template-areas:
-    "profile-photo profile-photo main-content main-content main-content main-content"
-    "profile-photo profile-photo main-content main-content main-content main-content"
-    "secondary-content secondary-content secondary-content secondary-photos-main secondary-photos-main secondary-photos-main"
-    "secondary-content secondary-content secondary-content secondary-photos-main secondary-photos-main secondary-photos-main"
-    "last-content last-content last-content-main last-content-main last-content-main last-content-main"
-    "last-content last-content last-content-main last-content-main last-content-main last-content-main"
-}
-
-.main-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . ."
-    ". . .";
-  grid-area: main-content;
-}
-
-.secondary-content { grid-area: secondary-content;}
-
-.profile-photo { grid-area: profile-photo; }
-
-.secondary-photos-main { grid-area: secondary-photos-main; }
-
-.last-content { grid-area: last-content; }
-
-.last-content-main { grid-area: last-content-main; }
-   
-footer{
+.content_main_container{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: var(--text-color)}
+
+.content_main_container h1{font-family: var(--title-font); font-size: 50px;}
+.content_main_container p{font-family: var(--paragraph-font); font-size: 20px; text-align: justify;  margin: 30px}
+.content_main_container li p{font-size: 15px;}
+
+
+.content_profile_photo{
+  display: flex;
+  justify-content: center;
 }
 
-@media only screen and (max-width:600px) {
-  .grid-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 2fr 2fr 1.2fr 1.2fr 1.2fr 1.2fr;
-      gap: 2px 0px;
-      grid-template-areas:
-        "main-content"
-        "profile-photo"
-        "secondary-content"
-        "secondary-photos-main"
-        "last-content"
-        "last-content-main"
-    }
-    
-    .main-content { grid-area: main-content; }
-    
-    .profile-photo { grid-area: profile-photo; }
-    
-    .secondary-content { grid-area: secondary-content; }
-    
-    .secondary-photos-main { grid-area: secondary-photos-main; }
-    
-    .last-content { grid-area: last-content; }
-    
-    .last-content-main { grid-area: last-content-main; }
-  } 
-   
-  
-    
+.content_profile_photo img{
+  width: 300px;
+}
+.skills_position{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills_logo {
+  width: 60px;
+  margin-top: 8vh;
+}
 
 
+.text_transition {
+	display: flex;
+	width: auto;
+	height: 40px;
+	color: var(--main-color);
+	font-size: 30px;
+  font-family: var(--title-font);
+	line-height: 40px;
+  text-align: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin-top: 8vh;
+  justify-content: center;
+	overflow: hidden;
+	
+}
 
-/* For presentation only, no need to copy the code below */
-.grid-container * {
-    border: 1px solid red;
+.text_transition ul {
+	animation: change 15s infinite;
+}
+
+.text_transition ul, p {
+	margin: 0;
+}
+
+.last-content h1{
+    font-size: 60px;
+    font-weight: 700;
+    font-family: var(--title-font);
+    color: white;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    background:var(--main-color);
     position: relative;
-  }
-  
-  .grid-container *:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+    text-align: center;
+}
+
+@keyframes text {
+    0%{
+        color: rgba(83, 240, 224, 0.938);
+        margin-bottom: -40px;
+    }
+
+    30%{
+        color: rgba(151, 242, 233, 0.938);
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+
+    85%{
+        color: rgba(199, 250, 245, 0.938);
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+
+@keyframes change {
+	
+	0%{ margin-top: 0;}
+	20%{ margin-top: 0;}
+	
+	25% {margin-top: -40px;}
+	50% {margin-top: -40px;}
+	
+	55% {margin-top: -80px;}
+	80% {margin-top: -80px;}
+	
+	85% {margin-top: -40px;}
+	95% {margin-top: -40px;}
+	
+	100% {margin-top: 0;}
+}
+
+
+
+@media only screen and (max-width: 1050px){.content_profile_photo img{width: 250px;}}
+@media only screen and (max-width: 800px){.content_profile_photo img{width: 100px;}}
+@media only screen and (max-width: 700px){.content_profile_photo img{width: 100px;}}
+@media only screen and (max-width: 600px){.content_profile_photo img{width: 200px;}}
+
+@media only screen and (max-width: 800px){
+  .content_main_container h1{font-size: 30px;}
+  .content_main_container p{font-size: 20px;}
+  .content_main_container li p{font-size: 15px; text-align: center;}
+}
+
+@media only screen and (max-width: 600px){
+  .content_main_container h1{font-size: 30px;}
+  .content_main_container p{font-size: 15px; text-align: center;}
+  .content_main_container li p{font-size: 10px; text-align: center;}
+}
+
