@@ -12,6 +12,14 @@ header {
     color: var(--text-color);
     font-family: var(--title-font);
     letter-spacing: 3px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header + .grid-container {
+  padding-top: 35vh;
 }
 
 
@@ -19,8 +27,6 @@ li, a{
   text-decoration: none;
   list-style-type: none;
 }
-
-
 
 .nav__links li {
     display: inline-block;
@@ -49,16 +55,6 @@ button {
 button:hover {
   background-color: rgb(0, 113, 109);
   color: white;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.sticky + .grid-container {
-  padding-top: 35vh;
 }
 
 @media only screen and (max-width: 1300px){.sticky + .grid-container {padding-top: 30vh;}}

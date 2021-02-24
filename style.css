@@ -31,10 +31,13 @@
 .content_profile_photo{
   display: flex;
   justify-content: center;
+  margin-top: 8vh;
 }
 
 .content_profile_photo img{
   width: 300px;
+
+  max-width: 400px;
 }
 .skills_position{
   display: flex;
@@ -56,7 +59,7 @@
   font-family: var(--title-font);
 	line-height: 40px;
   text-align: center;
-	top: 0;
+  top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -76,32 +79,32 @@
 
 .last-content h1{
     font-size: 60px;
-    font-weight: 700;
     font-family: var(--title-font);
     color: white;
     letter-spacing: 5px;
-    margin-bottom: 20px;
+    margin-top: 10vh;
     background:var(--main-color);
     position: relative;
     text-align: center;
+    border-radius:  0px 10px 10px 0px;
 }
 
 @keyframes text {
     0%{
         color: rgba(83, 240, 224, 0.938);
-        margin-bottom: -40px;
+        margin-bottom: -20px;
     }
 
     30%{
         color: rgba(151, 242, 233, 0.938);
-        letter-spacing: 25px;
-        margin-bottom: -40px;
+        letter-spacing: 20px;
+        margin-bottom: -20px;
     }
 
     85%{
         color: rgba(199, 250, 245, 0.938);
         letter-spacing: 8px;
-        margin-bottom: -40px;
+        margin-bottom: -20px;
     }
 }
 
@@ -123,6 +126,66 @@
 	100% {margin-top: 0;}
 }
 
+.box-projects {
+  width: 100%;
+  height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  font-family: var(--title-font);
+  font-size: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  justify-content: flex-end; 
+  color: white;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  text-align: justify;
+}
+
+
+.box-projects p {font-size: 15px; text-align: justify;}
+
+.show-text{display: none;}
+.show-title{width: 100%; text-align: end;}
+
+.box-projects:hover .show-text {display: block;}
+.box-projects:hover .show-title {text-align: start;}
+
+
+
+
+
+.box-projects:hover {
+  display: flex;
+  flex-direction: column;
+  background-image: none;
+  background-color: rgba(87, 183, 199, 0.7);
+}
+.projectmargin {
+  margin: 2vh;
+}
+
+.project1 {background-image: url("images/miniature-landingpage-project.jpg");}
+
+
+.project2 {background-image: url("images/miniature-surveyform-project.jpg");}
+
+.project3 {background-image: url("images/miniature-tributepage-project.jpg");}
+
+
+
+#projects{
+  margin: 5vh;
+}
+
+
+
+
+
 
 
 @media only screen and (max-width: 1050px){.content_profile_photo img{width: 250px;}}
@@ -140,5 +203,6 @@
   .content_main_container h1{font-size: 30px;}
   .content_main_container p{font-size: 15px; text-align: center;}
   .content_main_container li p{font-size: 10px; text-align: center;}
+  .last-content h1{margin-top: 2vh; border-radius: 0px;}
 }
 
