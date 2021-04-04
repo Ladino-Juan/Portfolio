@@ -39,6 +39,15 @@
 
   max-width: 400px;
 }
+
+#welcome-section{
+  padding-top: 0px;
+  margin-top: 0px;
+  display: block;
+  height: 100vh;
+}
+
+
 .skills_position{
   display: flex;
   align-items: center;
@@ -146,12 +155,9 @@
   text-align: justify;
 }
 
-
-.box-projects p {font-size: 15px; text-align: justify;}
-
+.box-projects p {font-size: 12px; text-align: justify;}
 .show-text{display: none;}
 .show-title{width: 100%; text-align: end;}
-
 .box-projects:hover .show-text {display: block;}
 .box-projects:hover .show-title {text-align: start;}
 
@@ -165,16 +171,22 @@
   background-image: none;
   background-color: rgba(87, 183, 199, 0.7);
 }
+
 .projectmargin {
   margin: 2vh;
 }
 
 .project1 {background-image: url("images/miniature-landingpage-project.jpg");}
 
-
 .project2 {background-image: url("images/miniature-surveyform-project.jpg");}
 
 .project3 {background-image: url("images/miniature-tributepage-project.jpg");}
+
+.project4 {background-image: url('images/miniature-comingsoonjs-project.jpg');}
+
+.project5 {background-image: url('images/miniature-comingsoonjs-project.jpg');}
+
+.project6 {background-image: url('images/miniature-comingsoonreact-project.jpg');}
 
 
 
